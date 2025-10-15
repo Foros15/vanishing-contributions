@@ -1,0 +1,13 @@
+name: vcon-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13.5
+  - pip
+  - pip:
+      - numpy>=2.2.6
+      - torch==2.7.1
+      - torchvision==0.22.1
+      - transformers==4.53.2
+      - tensorboard==2.20.0
+      - pillow==11.3.0

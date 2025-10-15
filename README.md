@@ -8,8 +8,8 @@
 
 ## 🧠 Abstract
 
-> **Vanishing Contributions (VCON)** is a general approach for smoothly transitioning neural models into compressed form.  
-> Instead of abruptly switching to a compressed model, VCON blends the original and compressed networks during fine-tuning, gradually shifting their contributions.  
+> **Vanishing Contributions (VCON)** is a general approach for smoothly transitioning neural models into compressed form.
+> Instead of abruptly switching to a compressed model, VCON blends the original and compressed networks during fine-tuning, gradually shifting their contributions.
 > This smooth transition improves stability and mitigates accuracy loss, with consistent gains across computer vision and NLP benchmarks.
 
 **Key Features:**
@@ -19,6 +19,13 @@
 - 📈 Typical gains: **3–20%** accuracy boost compared to compression + fine-tuning
 
 ---
+
+## 🔧 Quick setup with conda
+
+```bash
+conda env create -f environment.yaml
+conda activate vcon-env
+```
 
 ## ⚡ Quick Smoke Test
 
@@ -30,17 +37,17 @@ python train.py --model_name=vanilla-vit-tiny
 
 ## Train compressed models
 
-### Layer-wise unstructured pruning + fine-tuning
+Layer-wise unstructured pruning + fine-tuning
 ```bash
 python train.py --model_name=pruned-vit-tiny --prune_model
 ```
 
-### STE-based Binary quantization-aware training
+STE-based Binary quantization-aware training
 ```bash
 python train.py --model_name=quantized-vit-tiny --quantize_model
 ```
 
-### Low Rank Decomposition + fine-tuning
+Low Rank Decomposition + fine-tuning
 ```bash
 python train.py --model_name=lrd-vit-tiny --lrd_model
 ```
