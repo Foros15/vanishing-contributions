@@ -1,7 +1,8 @@
 # 🚀 Vanishing Contributions
 
 [![arXiv](https://img.shields.io/badge/arXiv-2510.09696-b31b1b.svg)](https://arxiv.org/abs/2510.09696)
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.13%2B-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.7+-EE4C2C?)](https://www.pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -29,7 +30,7 @@ conda activate vcon-env
 
 ## ⚡ Quick Smoke Test
 
-Verify your setup with a minimal run (vanilla training on Cifar-10):
+Verify your setup with a minimal run (vanilla training on Cifar-10). This test requires a maximum VRAM of ~5GB.
 
 ```bash
 python train.py --model_name=vanilla-vit-tiny
