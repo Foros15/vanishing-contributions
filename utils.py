@@ -112,7 +112,7 @@ class LowRankLayer(torch.nn.Module):
 
     def forward(self, input: torch.Tensor) -> torch.Tensor:
         if self.beta>0:
-            output = self.vanishing(input)*self.beta + self.matB(self.matA(input))
+            output = self.vanishing(input)*self.beta + self.matB(self.matA(input))*(1-self.beta)
         else:
             output= self.matB(self.matA(input))
         output+=self.bias
