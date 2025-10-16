@@ -31,15 +31,14 @@
 - 🔄 Works with pruning, quantization, low-rank, and more
 - 📈 Typical gains: **3–20%** accuracy boost compared to compression + fine-tuning
 
-**Working Mechanism**
+**Working Mechanism:**
 
-$$
-\bar g^t(x) = \beta^t f(x) + (1-\beta^t) g(x) 
-$$
+$$\bar g^t(x) = \beta^t f(x) + (1-\beta^t) g(x)$$
+
 where $f$ is the original neural block, $g$ is its compressed form and $\bar g^t$ is the convex combination of the two. $\beta^t$ follows a linear schedule during training
-$$
-\beta^t = \max \left(1-\frac{t}{Q}, 0 \right)
-$$
+
+$$\beta^t = \max \left(1-\frac{t}{Q}, 0 \right)$$
+
 where $t$ is the current training step. When $t=Q$, $\beta^t = 0$ and training continues with the compressed form only.
 
 ---
@@ -80,7 +79,7 @@ To launch Low Rank Decomposition (Rank = 16) + fine-tuning:
 python train.py --model_name=lrd-vit-tiny --lrd_model
 ```
 
-### Train compressed models with Vanishing Contributions
+### 🫧 Train compressed models with Vanishing Contributions
 To use VCON, you need to explicitly define the duration of the smooth transition into the compressed form (i.e., *_vcon_epochs)
 
 ```bash
