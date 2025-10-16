@@ -1,6 +1,6 @@
 from datetime import datetime
 from types import SimpleNamespace
-from typing import Tuple, Optional
+from typing import Tuple
 
 import numpy as np
 import torch
@@ -8,7 +8,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.tensorboard import SummaryWriter
 
-from utils import set_seed, generate_vit_paths, get_layers, Pruner, Quantizer, LRDer
+from .utils import set_seed, generate_vit_paths, get_layers, Pruner, Quantizer, LRDer
 
 
 class Trainer:

@@ -5,4 +5,5 @@ __all__ = [
     "data",
     "modeling",
     "trainer",
+    "utils",
 ]

@@ -2,15 +2,14 @@ import os
 import argparse
 import configparser
 from types import SimpleNamespace
-from typing import Dict
 
-from utils import combine_config, convert_string
+from .utils import combine_config, convert_string
 
 
 def default_config() -> configparser.ConfigParser:
     cfg = configparser.ConfigParser()
     cfg['System-setup'] = {
-        'num_workers': 36,
+        'num_workers': 4,
         'seed': 42,
     }
     cfg['Model'] = {

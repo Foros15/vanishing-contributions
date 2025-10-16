@@ -1,6 +1,4 @@
 models/
 cifar*
 __pycache__
-utils.py
-vit_training.py
 test-runs.sh
